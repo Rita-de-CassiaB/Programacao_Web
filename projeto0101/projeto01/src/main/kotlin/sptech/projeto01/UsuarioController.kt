@@ -31,9 +31,9 @@ class UsuarioController {
 //             usuario.autenticado = true
 //            return ResponseEntity.status(201).body(usuario)
 //        }else if(usuario.login != null && usuario.senha !=null && usuario.ativo = false){
-//            return ResponseEntity.status(401).body(usuario)
+//            return ResponseEntity.status(401).body(usuario) // "Quem é vc"
 //        }
-//        return ResponseEntity.status(403).body(usuario)
+//        return ResponseEntity.status(403).body(usuario) // "Aqui você não pode"
 //    }
 
     @DeleteMapping("/{indice}")
