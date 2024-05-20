@@ -1,0 +1,150 @@
+package school.sptech.projetoestoque.controller
+
+import jakarta.validation.Valid
+import org.modelmapper.ModelMapper
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.PutMapping
+import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
+import org.springframework.web.bind.annotation.RestController
+import school.sptech.projetoestoque.dominio.Produto
+import school.sptech.projetoestoque.dto.ProdutoCadastroRequest
+import school.sptech.projetoestoque.dto.ProdutoContabilResponse
+import school.sptech.projetoestoque.dto.ProdutoSimplesResponse
+import school.sptech.projetoestoque.repository.FabricanteRepository
+import school.sptech.projetoestoque.repository.ProdutoRepository
+
+@RestController
+@RequestMapping("/produtos")
+class ProdutoController(
+    // criando as repository como parâmetros do construtor, não é necessário o uso do @Autowired
+    val produtoRepository: ProdutoRepository,
+    val fabricanteRepository: FabricanteRepository,
+    val mapper: ModelMapper = ModelMapper()
+) {
+
+    @GetMapping("/simples/{id}")
+    fun getSimples(@PathVariable id:Int) : ResponseEntity<ProdutoSimplesResponse> {
+        if (produtoRepository.existsById(id)) {
+            val produto = produtoRepository.findById(id).get()
+
+            /*
+Aqui usamos o ModelMapper para converter o produto
+em um objeto do tipo ProdutoSimplesResponse.
+
+Todos os campos que possuem o mesmo nome e tipo serão "copiados"
+de produto para o novo objeto do tipo ProdutoSimplesResponse
+             */
+            val dto = mapper.map(
+                produto,
+                ProdutoSimplesResponse::class.java
+            )
+
+            return ResponseEntity.status(200).body(dto)
+        }
+        return ResponseEntity.status(404).build()
+    }
+
+    @GetMapping("/simples")
+    fun listarSimples() : ResponseEntity<List<ProdutoSimplesResponse>> {
+        val produtos = produtoRepository.findSimples()
+        if (produtos.isEmpty()) {
+            return ResponseEntity.status(204).build()
+        }
+
+/*
+Aqui pedimos para cada um dos itens da lista 'produtos'
+ser convertido em um objeto do tipo ProdutoSimplesResponse
+usando o ModelMapper
+ */
+        val dtos = produtos.map {
+            mapper.map(it, ProdutoSimplesResponse::class.java)
+        }
+
+        return ResponseEntity.status(200).body(dtos)
+    }
+
+    @GetMapping("/contabil")
+    fun listarContabil() : ResponseEntity<List<ProdutoContabilResponse>> {
+        val produtos = produtoRepository.findContabil()
+        if (produtos.isEmpty()) {
+            return ResponseEntity.status(204).build()
+        }
+
+        val dtos = produtos.map {
+            mapper.map(it, ProdutoContabilResponse::class.java)
+        }
+
+        return ResponseEntity.status(200).body(dtos)
+    }
+
+
+    @PostMapping
+    fun criar(@RequestBody @Valid novoProduto: ProdutoCadastroRequest) : ResponseEntity<Produto> {
+        // Verificando se o fabricante do produto existe, caso não, retorna 404
+        if (!fabricanteRepository.existsById(novoProduto.fabricante!!.id)) {
+            return ResponseEntity.status(404).build()
+        }
+
+        val produto = mapper.map(novoProduto, Produto::class.java)
+
+        // salva o produto vinculando um produto a um fabricante
+        produtoRepository.save(produto)
+
+        return ResponseEntity.status(201).body(produto)
+    }
+
+    @PutMapping("/{id}")
+    fun atualizar(@PathVariable id:Int, @RequestBody @Valid produto: Produto) : ResponseEntity<Produto> {
+        // Verificando se o fabricante do produto existe, caso não, retorna 404
+        if (!fabricanteRepository.existsById(produto.fabricante!!.id)) {
+            return ResponseEntity.status(404).build()
+        }
+        // salva o produto vinculando um produto a um fabricante
+        produto.id = id
+        val produtoSalvo = produtoRepository.save(produto)
+        return ResponseEntity.status(200).body(produtoSalvo)
+    }
+
+    @GetMapping
+    fun listar() : ResponseEntity<List<Produto>> {
+        val produtos = produtoRepository.findAll()
+
+        if (produtos.isEmpty()) {
+            return ResponseEntity.status(204).build()
+        }
+        return ResponseEntity.status(200).body(produtos)
+    }
+
+    @GetMapping("/filtro-fabricante/{fabricanteId}")
+    fun buscarPorIdFabricante(@PathVariable fabricanteId: Int):
+            ResponseEntity<List<Produto>> {
+
+        val produtos =
+            produtoRepository.findByFabricanteId(fabricanteId)
+
+        if (produtos.isEmpty()) {
+            return ResponseEntity.status(204).build()
+        }
+        return ResponseEntity.status(200).body(produtos)
+    }
+
+    @GetMapping("/filtro-qtd")
+    fun buscarPorIdFabricante(
+        @RequestParam qtdMin: Int, // @RequestParam utilizado para fazer buscas personalizadas que sejam diferentes do id
+        @RequestParam qtdMax: Int):
+            ResponseEntity<List<Produto>> {
+
+        val produtos =
+            produtoRepository.findByQtdEstoqueBetween(qtdMin, qtdMax)
+
+        if (produtos.isEmpty()) {
+            return ResponseEntity.status(204).build()
+        }
+        return ResponseEntity.status(200).body(produtos)
+    }
+}
