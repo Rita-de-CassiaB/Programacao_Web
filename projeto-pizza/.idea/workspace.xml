@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="92e08c3b-428f-4477-bf57-b897c7a1e12b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/ProjetoJpa1Application.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/controller/ClienteController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/controller/ComplementoController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/controller/EnderecoController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/controller/MusicaController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/Cliente.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/Complemento.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/Cores.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/Defeito.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/Direcao.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/Doenca.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/Endereco.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/Ficha.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/Musica.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/NivelAcesso.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/ParteCorpo.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/SituacaoGestante.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/dominio/Tratamento.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/ClienteRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/ComplementoRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/CoresRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/DefeitoRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/DirecaoRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/DoencaRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/EnderecoRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/FichaRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/MusicaRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/NivelAcessoRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/ParteCorpoRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/SituacaoGestanteRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/kotlin/sptech/projetojpa1/repository/TratamentoRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-jpa1/src/test/kotlin/sptech/projetojpa1/ProjetoJpa1ApplicationTests.kt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2f9Y9OtF3qIE5bsBmYNNzzM4njB" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/ritad/Desktop/Faculdade/Programacao_Web/projeto-pizza/pom.xml"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ProjetoEstoqueApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Schoo.sptech.projetoestoque.ProjetoEstoqueApplicationKt" />
+      <module name="projeto-estoque" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.ProjetoEstoqueApplicationKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92e08c3b-428f-4477-bf57-b897c7a1e12b" name="Changes" comment="" />
+      <created>1713214609270</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713214609270</updated>
+    </task>
+    <servers />
+  </component>
+</project>
